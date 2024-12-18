@@ -1,4 +1,4 @@
-import { Survey } from './survey'
+import type { Survey } from './survey'
 
 export type SurveyQuestion = {
   id: number
