@@ -1,4 +1,4 @@
 export type Survey = {
   id: number
-  label: string
+  name: string
 }

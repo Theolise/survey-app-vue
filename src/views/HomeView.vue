@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
+import SurveyInfo from '@/components/SurveyInfo.vue'
 import { getAllSurveys } from '@/services/surveyApi'
-import { Survey } from '@/types/survey'
+import type { Survey } from '@/types/survey'
 
 const surveys = ref<Survey[]>([])
 
@@ -13,12 +14,13 @@ const fetchSurveys = async () => {
 }
 
 onMounted(() => {
-  // fetchSurveys()
+  fetchSurveys()
 })
 </script>
 
 <template>
   <main>
-    <h1>Home view</h1>
+    <h1>Surveys ongoing</h1>
+    <SurveyInfo v-for="survey in surveys" :key="survey.id" :survey="survey" />
   </main>
 </template>
