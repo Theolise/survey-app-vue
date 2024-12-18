@@ -1,5 +1,5 @@
-import { Survey } from './survey'
-import { SurveyQuestion } from './surveyQuestion'
+import type { Survey } from './survey'
+import type { SurveyQuestion } from './surveyQuestion'
 
 export type SurveyResult = {
   id: {
